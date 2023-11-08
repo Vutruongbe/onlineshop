@@ -40,7 +40,7 @@ namespace TeduShop.UnitTest.RepositoryTest
             unitOfWork.Commit();
 
             Assert.IsNotNull(result);
-            Assert.AreEqual(11, result.ID);
+            Assert.AreEqual(12, result.ID);
         }
 
     }
