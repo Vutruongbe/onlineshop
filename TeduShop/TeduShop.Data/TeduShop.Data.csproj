@@ -40,6 +40,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.4\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.4\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -65,6 +71,10 @@
     <Compile Include="Migrations\202311080236028_AddErrorTable.cs" />
     <Compile Include="Migrations\202311080236028_AddErrorTable.designer.cs">
       <DependentUpon>202311080236028_AddErrorTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311081341149_Intergrate-AspnetIndentity.cs" />
+    <Compile Include="Migrations\202311081341149_Intergrate-AspnetIndentity.designer.cs">
+      <DependentUpon>202311081341149_Intergrate-AspnetIndentity.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311080236028_AddErrorTable.resx">
       <DependentUpon>202311080236028_AddErrorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311081341149_Intergrate-AspnetIndentity.resx">
+      <DependentUpon>202311081341149_Intergrate-AspnetIndentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
