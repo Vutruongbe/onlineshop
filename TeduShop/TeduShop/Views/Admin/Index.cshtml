@@ -1,19 +1,18 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html ng-app>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <script src="~/Scripts/plugins/angular/angular.js"></script>
-</head>
-<body>
-    <div>
-        10 + 20 = {{10+20}}
-    </div>
-</body>
+﻿<html ng-app="myModule">
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+        <script src="~/Scripts/plugins/angular/angular.js"></script>
+        <script src="~/Scripts/spa/app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="schoolController">
+            <div ng-controller="studentController">
+                {{message}}
+            </div>
+            <div ng-controller="teacherController">
+                {{message}}
+            </div>
+        </div>
+    </body>
 </html>

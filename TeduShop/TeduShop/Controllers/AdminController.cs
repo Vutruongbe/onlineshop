@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TeduShop.Web.Controllers
+namespace TeduShop.Controllers
 {
     public class AdminController : Controller
     {
