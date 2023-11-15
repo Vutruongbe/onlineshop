@@ -1,18 +1,22 @@
 ﻿/// <reference path="../plugins/angular/angular.js" />
-//B18: $scope, $rootScope, $scope lồng nhau 
-//B19: service, ng-click, ng-model, cách gọi sự kiện
+//B18: $scope, $rootScope, $scope lồng nhau
+//B19: service, ng-click, ng-model, cách gọi sự kiện, custom service
+//B20: directive, custom directive
 
 
 var myApp = angular.module('myModule', []);
 
 myApp.controller("schoolController", schoolController);
-myApp.service('Validator', Validator);
 
-schoolController.$inject = ['$scope', 'Validator'];
+myApp.directive("teduShopDirective", teduShopDirective);
 
-function schoolController($scope, Validator) {
+myApp.service('ValidatorService', Validator);
+
+schoolController.$inject = ['$scope', 'ValidatorService'];
+
+function schoolController($scope, ValidatorService) {
     $scope.checkNumber = function () {
-        $scope.message = Validator.checkNumber($scope.num);
+        $scope.message = ValidatorService.checkNumber($scope.num);
     }
     $scope.num = 1;
 }
@@ -32,3 +36,16 @@ function Validator($window) {
             return 'Đây là số lẻ';
     }
 }
+
+function teduShopDirective() {
+    return {
+        restrict: "A",
+        //template: "<h1>This is my first custom directive</h1>"
+        templateUrl: "/Scripts/spa/teduShopDirective.html"
+    }
+}
+//restrict: "E" :element
+//restrict: "A" :Attribute
+//restrict: "C" :class
+//restrict: "M" :Comment
+
