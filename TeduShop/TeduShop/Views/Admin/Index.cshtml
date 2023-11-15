@@ -7,12 +7,10 @@
     </head>
     <body>
         <div ng-controller="schoolController">
-            <div ng-controller="studentController">
-                {{message}}
-            </div>
-            <div ng-controller="teacherController">
-                {{message}}
-            </div>
+            <input type="number" ng-model="num"/> Value of textbox: {{num}}
+            <button ng-click="checkNumber()">Check Number</button>
+            <br />
+            {{message}}
         </div>
     </body>
 </html>
