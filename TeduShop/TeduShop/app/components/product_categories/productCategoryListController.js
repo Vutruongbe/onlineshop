@@ -91,7 +91,7 @@
             }
             apiService.get('/api/productcategory/getall', config, function (result) {
                 if (result.data.TotalCount == 0) {
-                    notificationService.displayWarning('Không có bản ghi nào được tìm thấy!.');
+                    notificationService.displayWarning('Không có bản ghi nào được tìm thấy!');
                 } else {
                     notificationService.displaySuccess('Đã tìm thấy ' + result.data.TotalCount + ' bản ghi.');
                 }
