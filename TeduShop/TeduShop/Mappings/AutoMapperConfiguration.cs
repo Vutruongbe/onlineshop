@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using TeduShop.Model.Models;
+using TeduShop.Models;
 using TeduShop.Web.Models;
 
 namespace TeduShop.Mappings
@@ -15,6 +16,7 @@ namespace TeduShop.Mappings
             Mapper.CreateMap<ProductCategory, ProductCategoryViewModel>();
             Mapper.CreateMap<Product, ProductViewModel>();
             Mapper.CreateMap<ProductTag, ProductTagViewModel>();
+            Mapper.CreateMap<Footer, FooterViewModel>();
         }
     }
 }
