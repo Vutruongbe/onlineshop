@@ -85,7 +85,7 @@
             <div class="product-left">
                 @foreach (var product in Model.LastestProducts)
                 {
-                    var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                    var url = "/" + product.Alias + ".p-" + product.ID + ".html/";
                     <div class="col-md-4 chain-grid grid-top-chain">
                         <a href="@url"><img class="img-responsive chain" src="@product.Image" /></a>
                         <span class="star"> </span>
@@ -127,7 +127,7 @@
             <div class="product-left">
                 @foreach (var product in Model.TopSaleProducts)
                 {
-                    var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                    var url = "/" + product.Alias + ".p-" + product.ID + ".html/";
                     <div class="col-md-4 chain-grid grid-top-chain">
                         <a href="@url"><img class="img-responsive chain" src="@product.Image" /></a>
                         <span class="star"> </span>

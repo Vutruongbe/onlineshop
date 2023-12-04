@@ -4111,6 +4111,7 @@
     <Content Include="Assets\client\js\jquery.flexisel.js" />
     <Content Include="Assets\client\js\jquery.min.js" />
     <Content Include="Assets\client\js\jquery.wmuSlider.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Libs\CKFinder.dll" />
@@ -4325,12 +4326,6 @@
     <Content Include="Assets\admin\libs\toastr\toastr.js.map" />
     <Content Include="Assets\admin\libs\toastr\toastr.less" />
     <Content Include="Assets\admin\libs\toastr\toastr.scss" />
-    <Content Include="Assets\admin\libs\angular-ui-router\.bower.json" />
-    <Content Include="Assets\admin\libs\angular-ui-router\bower.json" />
-    <Content Include="Assets\admin\libs\angular-ui-router\CHANGELOG.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\CONTRIBUTING.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\LICENSE" />
-    <Content Include="Assets\admin\libs\angular-ui-router\README.md" />
     <Content Include="Assets\admin\libs\angular-loading-bar\.bower.json" />
     <Content Include="Assets\admin\libs\angular-loading-bar\bower.json" />
     <Content Include="Assets\admin\libs\angular-loading-bar\CHANGELOG.md" />
@@ -4353,6 +4348,12 @@
     <Content Include="ConnectionStrings.config" />
     <Content Include="AppSettings.config" />
     <Content Include="Assets\client\images\Thumbs.db" />
+    <Content Include="Assets\admin\libs\angular-ui-router\.bower.json" />
+    <Content Include="Assets\admin\libs\angular-ui-router\bower.json" />
+    <Content Include="Assets\admin\libs\angular-ui-router\CHANGELOG.md" />
+    <Content Include="Assets\admin\libs\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="Assets\admin\libs\angular-ui-router\LICENSE" />
+    <Content Include="Assets\admin\libs\angular-ui-router\README.md" />
     <None Include="packages.config" />
     <Content Include="Views\Admin\index.cshtml" />
     <Content Include="Views\Shared\Layouts.cshtml" />
