@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace TeduShop.Web.Controllers
 {
-    public class AdminController : Controller
+    public class AboutController : Controller
     {
-        // GET: Admin
+        // GET: About
         public ActionResult Index()
         {
             return View();

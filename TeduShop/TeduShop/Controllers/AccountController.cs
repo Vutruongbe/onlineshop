@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace TeduShop.Web.Controllers
 {
-    public class AdminController : Controller
+    public class AccountController : Controller
     {
-        // GET: Admin
-        public ActionResult Index()
+        // GET: Account
+        public ActionResult Login()
         {
             return View();
         }

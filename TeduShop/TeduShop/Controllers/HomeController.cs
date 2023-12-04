@@ -9,7 +9,7 @@ using TeduShop.Models;
 using TeduShop.Service;
 using TeduShop.Web.Models;
 
-namespace TeduShop.Controllers
+namespace TeduShop.Web.Controllers
 {
     public class HomeController : Controller
     {
