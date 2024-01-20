@@ -1,8 +1,5 @@
 ﻿using AutoMapper;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using TeduShop.Model.Models;
 using TeduShop.Models;

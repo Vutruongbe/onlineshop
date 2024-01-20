@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using TeduShop.Data.Infrastructure;
 using TeduShop.Model.Models;

@@ -1,16 +1,12 @@
 ﻿namespace TeduShop.Data.Migrations
 {
-    using Microsoft.AspNet.Identity.EntityFramework;
-    using Microsoft.AspNet.Identity;
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-    using TeduShop.Model.Models;
     using System.Collections.Generic;
-    using TeduShop.Common;
+    using System.Data.Entity.Migrations;
     using System.Data.Entity.Validation;
     using System.Diagnostics;
+    using System.Linq;
+    using TeduShop.Common;
+    using TeduShop.Model.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TeduShop.Data.TeduShopDbContext>
     {
@@ -25,8 +21,7 @@
             CreateSlide(context);
             //  This method will be called after migrating to the latest version.
             CreatePage(context);
-
-
+            CreateContactDetail(context);
         }
         private void CreateUser(TeduShopDbContext context)
         {
@@ -61,12 +56,12 @@
             if (context.ProductCategories.Count() == 0)
             {
                 List<ProductCategory> listProductCategory = new List<ProductCategory>()
-            {
-                new ProductCategory() { Name="Điện lạnh",Alias="dien-lanh",Status=true },
-                 new ProductCategory() { Name="Viễn thông",Alias="vien-thong",Status=true },
-                  new ProductCategory() { Name="Đồ gia dụng",Alias="do-gia-dung",Status=true },
-                   new ProductCategory() { Name="Mỹ phẩm",Alias="my-pham",Status=true }
-            };
+                {
+                    new ProductCategory() { Name="Điện lạnh",Alias="dien-lanh",Status=true },
+                    new ProductCategory() { Name="Viễn thông",Alias="vien-thong",Status=true },
+                    new ProductCategory() { Name="Đồ gia dụng",Alias="do-gia-dung",Status=true },
+                    new ProductCategory() { Name="Mỹ phẩm",Alias="my-pham",Status=true }
+                };
                 context.ProductCategories.AddRange(listProductCategory);
                 context.SaveChanges();
             }
@@ -76,7 +71,9 @@
         {
             if (context.Footers.Count(x => x.ID == CommonConstants.DefaultFooterId) == 0)
             {
+#pragma warning disable CS0219 // The variable 'content' is assigned but its value is never used
                 string content = "";
+#pragma warning restore CS0219 // The variable 'content' is assigned but its value is never used
             }
         }
 
@@ -130,6 +127,43 @@
 
                     };
                     context.Pages.Add(page);
+                    context.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var eve in ex.EntityValidationErrors)
+                    {
+                        Trace.WriteLine($"Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation error.");
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Trace.WriteLine($"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private void CreateContactDetail(TeduShopDbContext context)
+        {
+            if (context.ContactDetails.Count() == 0)
+            {
+                try
+                {
+                    var contactDetail = new TeduShop.Model.Models.ContactDetail()
+                    {
+                        Name = "Shop thời trang TEDU",
+                        Address = "Ngõ 77 Xuân La",
+                        Email = "tedu@gmail.com",
+                        Lat = 21.0633645,
+                        Lng = 105.8053274,
+                        Phone = "095423233",
+                        Website = "http://tedu.com.vn",
+                        Other = "",
+                        Status = true
+
+                    };
+                    context.ContactDetails.Add(contactDetail);
                     context.SaveChanges();
                 }
                 catch (DbEntityValidationException ex)

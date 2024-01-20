@@ -1,15 +1,14 @@
-﻿using Microsoft.AspNet.Identity.Owin;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
-using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.OAuth;
 using Owin;
 using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using TeduShop.Data;
 using TeduShop.Model.Models;
-using Microsoft.Owin.Security.OAuth;
-using System.Security.Claims;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 [assembly: OwinStartup(typeof(TeduShop.App_Start.Startup))]
 
@@ -58,7 +57,9 @@ namespace TeduShop.App_Start
 
         public class AuthorizationServerProvider : OAuthAuthorizationServerProvider
         {
+#pragma warning disable CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
             public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
+#pragma warning restore CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
             {
                 context.Validated();
             }

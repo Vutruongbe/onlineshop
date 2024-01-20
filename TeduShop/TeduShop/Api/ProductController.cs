@@ -61,7 +61,7 @@ namespace TeduShop.Api
 
         [Route("getall")]
         [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
+        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 5)
         {
             return CreateHttpResponse(request, () =>
             {

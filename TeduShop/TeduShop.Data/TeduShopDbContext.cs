@@ -1,10 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TeduShop.Model.Models;
 
 namespace TeduShop.Data
@@ -38,6 +33,7 @@ namespace TeduShop.Data
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
 
         public DbSet<Error> Errors { set; get; }
+        public DbSet<ContactDetail> ContactDetails { set; get; }
 
         public static TeduShopDbContext Create()
         {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using TeduShop.Data.Infrastructure;
 using TeduShop.Model.Models;
-using System.Linq;
 
 namespace TeduShop.Data.Repositories
 {

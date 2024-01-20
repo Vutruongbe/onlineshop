@@ -1,21 +1,19 @@
-﻿using Autofac.Integration.Mvc;
+﻿using Autofac;
+using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
-using Autofac;
+using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
+using Microsoft.Owin.Security.DataProtection;
 using Owin;
-using System;
 using System.Reflection;
-using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
+using TeduShop.Data;
 using TeduShop.Data.Infrastructure;
 using TeduShop.Data.Repositories;
-using TeduShop.Data;
-using TeduShop.Service;
-using Microsoft.AspNet.Identity;
-using Microsoft.Owin.Security.DataProtection;
-using System.Web;
 using TeduShop.Model.Models;
+using TeduShop.Service;
 
 [assembly: OwinStartup(typeof(TeduShop.App_Start.Startup))]
 

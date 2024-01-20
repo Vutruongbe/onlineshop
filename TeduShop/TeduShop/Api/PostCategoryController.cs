@@ -6,8 +6,8 @@ using System.Web.Http;
 using TeduShop.Infrastructure.Core;
 using TeduShop.Model.Models;
 using TeduShop.Service;
-using TeduShop.Web.Models;
 using TeduShop.Web.Infrastructure.Extensions;
+using TeduShop.Web.Models;
 
 namespace TeduShop.Api
 {
@@ -25,19 +25,19 @@ namespace TeduShop.Api
         public HttpResponseMessage Get(HttpRequestMessage request)
         {
             return CreateHttpResponse(request, () =>
-            {   
+            {
                 var listcategory = _postCategoryService.GetAll();
 
                 var listPostCategoryVm = Mapper.Map<List<PostCategoryViewModel>>(listcategory);
 
                 HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, listPostCategoryVm);
-                
+
                 return response;
             });
         }
 
         [Route("add")]
-        public HttpResponseMessage Post(HttpRequestMessage request,PostCategoryViewModel postCategoryVm)
+        public HttpResponseMessage Post(HttpRequestMessage request, PostCategoryViewModel postCategoryVm)
         {
             return CreateHttpResponse(request, () =>
             {

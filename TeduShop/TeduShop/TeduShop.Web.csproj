@@ -216,6 +216,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Controllers\PostController.cs" />
@@ -227,6 +228,7 @@
     <Compile Include="Infrastructure\Core\PaginationSet.cs" />
     <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Models\ContactDetailViewModel.cs" />
     <Compile Include="Models\FooterViewModel.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\PageViewModel.cs" />
@@ -5060,12 +5062,6 @@
     <Content Include="ConnectionStrings.config" />
     <Content Include="AppSettings.config" />
     <Content Include="Assets\client\images\Thumbs.db" />
-    <Content Include="Assets\admin\libs\angular-ui-router\.bower.json" />
-    <Content Include="Assets\admin\libs\angular-ui-router\bower.json" />
-    <Content Include="Assets\admin\libs\angular-ui-router\CHANGELOG.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\CONTRIBUTING.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\LICENSE" />
-    <Content Include="Assets\admin\libs\angular-ui-router\README.md" />
     <Content Include="Assets\client\font-awesome-4.6.3\fonts\fontawesome-webfont.eot" />
     <Content Include="Assets\client\font-awesome-4.6.3\fonts\fontawesome-webfont.ttf" />
     <Content Include="Assets\client\font-awesome-4.6.3\fonts\fontawesome-webfont.woff" />
@@ -5107,6 +5103,12 @@
     <Content Include="Assets\admin\libs\jquery-ui\README.md" />
     <Content Include="Assets\admin\libs\jquery-ui\ui\.DS_Store" />
     <Content Include="Assets\admin\libs\jquery-ui\ui\.jshintrc" />
+    <Content Include="Assets\admin\libs\angular-ui-router\.bower.json" />
+    <Content Include="Assets\admin\libs\angular-ui-router\bower.json" />
+    <Content Include="Assets\admin\libs\angular-ui-router\CHANGELOG.md" />
+    <Content Include="Assets\admin\libs\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="Assets\admin\libs\angular-ui-router\LICENSE" />
+    <Content Include="Assets\admin\libs\angular-ui-router\README.md" />
     <None Include="packages.config" />
     <Content Include="Views\Admin\index.cshtml" />
     <Content Include="Views\Shared\Layouts.cshtml" />
@@ -5119,6 +5121,8 @@
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Product\ListByTag.cshtml" />
     <Content Include="Views\Page\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">

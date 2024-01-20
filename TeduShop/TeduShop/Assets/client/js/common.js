@@ -27,8 +27,8 @@
             }
         }).autocomplete("instance")._renderItem = function (ul, item) {
             return $("<li>")
-                .append("<a>" + item.label + "</a>")
-                .appendTo(ul);
+              .append("<a>" + item.label + "</a>")
+              .appendTo(ul);
         };
     }
 }

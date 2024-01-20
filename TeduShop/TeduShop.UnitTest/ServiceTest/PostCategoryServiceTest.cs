@@ -48,7 +48,9 @@ namespace TeduShop.UnitTest.ServiceTest
         public void PostCategory_Service_Create()
         {
             PostCategory category = new PostCategory();
+#pragma warning disable CS0219 // The variable 'id' is assigned but its value is never used
             int id = 1;
+#pragma warning restore CS0219 // The variable 'id' is assigned but its value is never used
             category.Name = "Test";
             category.Alias = "test";
             category.Status = true;
